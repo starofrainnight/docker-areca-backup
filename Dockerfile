@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
     default-jre \
     && apt-get clean
 
+# Fixed WARNING: no acl in java.library.path
+RUN ln -s /lib/x86_64-linux-gnu/libacl.so.1 /usr/lib/libacl.so
+
 RUN wget -O areca-linux.tar.gz http://sourceforge.net/projects/areca/files/areca-stable/areca-7.5/areca-7.5-linux-gtk-64.tar.gz/download \
     && tar xvf areca-linux.tar.gz \
     && cp -rf areca/* /usr/local/ \
