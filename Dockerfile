@@ -1,3 +1,5 @@
+# areca-7.5 only work fine with default-jre in ubuntu 14.04
+# that needs some script fixs for areca-7.5 after ubuntu 16.04
 FROM ubuntu:14.04
 MAINTAINER Hong-She Liang <starofrainnight@gmail.com>
 
