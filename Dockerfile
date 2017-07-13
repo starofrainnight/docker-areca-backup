@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean
 
 # Fixed WARNING: no acl in java.library.path
-RUN ln -s /lib/x86_64-linux-gnu/libacl.so.1 /usr/lib/libacl.so
+RUN ln -s /lib/x86_64-linux-gnu/libacl.so.1.1.0 /usr/lib/libacl.so
+
+# Added areca account and add to root group
+RUN useradd -U areca
+RUN gpasswd -a root areca
 
 RUN wget -O areca-linux.tar.gz http://sourceforge.net/projects/areca/files/areca-stable/areca-7.5/areca-7.5-linux-gtk-64.tar.gz/download \
     && tar xvf areca-linux.tar.gz \
