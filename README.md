@@ -16,11 +16,11 @@ But all these drawbacks could be solved by the  wrapper program [abhealer](https
 This docker contained an installed Areca Backup program (only console version).
 
 ## Usage
-You execute it with command :
+You could execute it with command :
 
     docker run -it --rm starofrainnight/areca-backup areca_cl.sh
 
-In normally, this docker image works as abhealer's backend, you don't have to directly invoke it.
+In normally, this docker image works as abhealer's backend, you don't have to invoke it directly.
 
 ## Volumes
 
